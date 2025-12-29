@@ -66,9 +66,8 @@ Bu GitHub reposunda:
 - Modelin eğitiminde kullanılan kodlar
 - Eğitilmiş model dosyaları(kısıtlı)
 - Eğitim sürecine ait performans çıktıları
-
-yer almaktadır.
-
+  yer almaktadır.
+Eğitilen modele drive linki üzerinden ulaşabilirsiniz:https://drive.google.com/file/d/1nbmmtKCvDanNl6eww4WaLRfFU5i1L6ab/view?usp=drive_link
 ### Kullanılan Model
 - `google/vit-base-patch16-224`
 
