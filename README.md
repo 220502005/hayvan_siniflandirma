@@ -46,8 +46,7 @@ Türkçe karşılıkları ile gösterilmektedir.
 
 ##  Model Hakkında
 
-> Bilgisayar donanım kısıtları nedeniyle model eğitimi farklı bir bilgisayarda
-> gerçekleştirilmiş, elde edilen eğitilmiş model dosyaları bu projede kullanılmıştır.
+> Bilgisayar donanım kısıtları nedeniyle model eğitimi farklı bir bilgisayar ortamında gerçekleştirilmiştir.
 
 Projede, Hugging Face Transformers kütüphanesi kullanılarak eğitilmiş bir
 **Image Classification modeli** yer almaktadır.
