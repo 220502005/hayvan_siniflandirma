@@ -107,7 +107,7 @@ Arayüz, sade ve kullanıcı dostu olacak şekilde tasarlanmıştır. Arayüzün
 ![Hayvan Sınıflandırma Arayüzü](Hayvan_Siniflandırma_Arayüz.png)
 
 ### Demo Videosu
-https://drive.google.com/file/d/1xJZ2xJVo6Eira_t3INLoA1GtFtQ4SYgQ/view?usp=sharing
+https://drive.google.com/file/d/1xJZ2xJVo6Eira_t3INLoA1GtFtQ4SYgQ/view?usp=drive_link
 
 ---
 
