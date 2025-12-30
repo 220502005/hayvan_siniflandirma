@@ -48,10 +48,10 @@ Türkçe karşılıkları ile gösterilmektedir.
 
 ##  Model Hakkında
 
-> Bilgisayar donanım kısıtları(gpu) nedeniyle model eğitimi farklı bir bilgisayar ortamında gerçekleştirilmiştir.
+> Bilgisayar donanım kısıtları(GPU) nedeniyle model eğitimi farklı bir bilgisayar ortamında gerçekleştirilmiştir.
 
 Projede, Hugging Face Transformers kütüphanesi kullanılarak eğitilmiş bir
-**Image Classification modeli** yer almaktadır.
+görüntü sınıflandırma modeli yer almaktadır.
 
 Model dosyaları `data/` klasörü içinde bulunmaktadır:
 
@@ -60,8 +60,6 @@ Model dosyaları `data/` klasörü içinde bulunmaktadır:
 - `preprocessor_config.json`
 - `training_args.bin`
 - `checkpoint-*`
-  
-Eğitilen modele drive linki üzerinden ulaşabilirsiniz:https://drive.google.com/file/d/1nbmmtKCvDanNl6eww4WaLRfFU5i1L6ab/view?usp=drive_link
 
 Bu projede, görüntü sınıflandırma görevleri için yaygın olarak kullanılan
 Vision Transformer (ViT) mimarisi tercih edilmiştir.
@@ -73,6 +71,11 @@ Vision Transformer (ViT) mimarisi tercih edilmiştir.
 - Learning Rate: **2e-5**
 - Optimizer: **AdamW**
 - Kayıp Fonksiyonu: **Cross Entropy Loss**
+
+  
+### Eğitilen model dosyası
+Model dosyalarına aşağıdaki bağlantı üzerinden erişilebilir:
+https://drive.google.com/file/d/1nbmmtKCvDanNl6eww4WaLRfFU5i1L6ab/view?usp=drive_link
 
 ---
 
@@ -101,7 +104,8 @@ Arayüz, sade ve kullanıcı dostu olacak şekilde tasarlanmıştır. Arayüzün
 
 ![Hayvan Sınıflandırma Arayüzü](Hayvan_Siniflandırma_Arayüz.png)
 
-Aynı zamanda demo videosuna ulaşmak içni bu drive linkini kullanabilirsiniz: https://drive.google.com/file/d/1xJZ2xJVo6Eira_t3INLoA1GtFtQ4SYgQ/view?usp=sharing
+### Demo Videosu
+https://drive.google.com/file/d/1xJZ2xJVo6Eira_t3INLoA1GtFtQ4SYgQ/view?usp=sharing
 
 ---
 
@@ -111,6 +115,7 @@ Uygulamayı çalıştırmadan önce gerekli Python kütüphanelerinin kurulu olm
 
 Gereklilikler:
 - Python 3.9 veya üzeri
+- Kütüphaneler
 - Proje dosyaları
 - Eğitilmiş modelin bulunduğu `data/` klasörü
 
