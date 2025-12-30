@@ -1,3 +1,4 @@
+
 #  Hayvan Görüntüleri Sınıflandırma
 
 Bu proje, eğitilmiş bir yapay zeka modeli kullanarak hayvan görüntülerini
@@ -74,8 +75,9 @@ Vision Transformer (ViT) mimarisi tercih edilmiştir.
 
   
 ### Eğitilen model dosyası
-Model dosyalarına aşağıdaki bağlantı üzerinden erişilebilir:
-https://drive.google.com/file/d/1nbmmtKCvDanNl6eww4WaLRfFU5i1L6ab/view?usp=drive_link
+Model dosyalarına aşağıdaki bağlantı üzerinden erişilebilir
+https://drive.google.com/drive/folders/13LNSnupAexF-FZyBJpBzg6wNA-ZBH5GO?usp=drive_link
+
 
 ---
 
