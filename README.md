@@ -1,74 +1,69 @@
-#  Yapay Zeka Destekli Hayvan Görüntü Sınıflandırma
+#  Hayvan Görüntüleri Sınıflandırma
 
-Bu projede, derin öğrenme tabanlı bir **Vision Transformer (ViT)** modeli kullanılarak hayvan görüntülerinin otomatik olarak sınıflandırılması amaçlanmıştır.  
-Eğitilen model, **Streamlit** kullanılarak geliştirilen kullanıcı dostu bir web arayüzü ile entegre edilmiştir.
+Bu proje, eğitilmiş bir yapay zeka modeli kullanarak hayvan görüntülerini
+sınıflandıran, Streamlit tabanlı bir web uygulamasıdır.
 
-Proje, *Yapay Zeka ve Bulut Bilişim Teknolojileri* dersi kapsamında hazırlanmıştır.
+Kullanıcı tarafından yüklenen bir hayvan görseli, model tarafından analiz edilir
+ve hangi hayvan sınıfına ait olduğu tahmin edilerek kullanıcıya gösterilir.
 
----
-
-##  Proje Amacı
-
-Bu projenin temel amacı:
-
-- Görüntü sınıflandırma problemini derin öğrenme yöntemleri ile çözmek  
-- Önceden eğitilmiş bir Vision Transformer modelini kullanmak  
-- Model çıktısını kullanıcı dostu bir web arayüzü üzerinden sunmaktır  
 
 ---
 
 ##  Kullanılan Teknolojiler ve Kütüphaneler
 
+Projede aşağıdaki teknolojiler ve kütüphaneler kullanılmıştır:
+
 - **Python**
 - **PyTorch**
 - **Hugging Face Transformers**
-- **Vision Transformer (ViT)**
 - **Streamlit**
-- **Matplotlib**
-- **Scikit-learn**
-- **PIL (Python Imaging Library)**
+- **Pillow (PIL)**
+- **Safetensors**
 
 ---
 
 ##  Veri Seti
 
-Projede **Animals-10 Dataset** kullanılmıştır. link:
+Projede **Animals-10 Dataset** kullanılmıştır. 
+Veri seti kaynağı: https://www.kaggle.com/datasets/alessiocorrado99/animals10
 
-Veri seti:
-- 10 farklı hayvan sınıfı içermektedir  
-- Dengeli ve etiketli görsellerden oluşmaktadır  
+Veri seti, 10 farklı hayvan sınıfı içermektedir. Veri setindeki sınıf etiketleri orijinal olarak İtalyanca olarak
+tanımlanmıştır. Uygulama arayüzünde kullanıcı deneyimini artırmak amacıyla bu etiketler
+Türkçe karşılıkları ile gösterilmektedir.
 
-Sınıflar:
-- Köpek
-- At
-- Fil
-- Kelebek
-- Tavuk
-- Kedi
-- İnek
-- Koyun
-- Örümcek
-- Sincap
-
-Veriler, eğitim sürecinde:
-- %80 eğitim
-- %20 doğrulama (validation)
-
-olacak şekilde ayrılmıştır.
-
+- cane – Köpek  
+- cavallo – At  
+- elefante – Fil  
+- farfalla – Kelebek  
+- gallina – Tavuk  
+- gatto – Kedi  
+- mucca – İnek  
+- pecora – Koyun  
+- ragno – Örümcek  
+- scoiattolo – Sincap
+  
 ---
 
-##  Model Eğitimi
+##  Model Hakkında
 
-Model eğitimi **farklı bir bilgisayarda** gerçekleştirilmiştir.  (Ekran kartı sebebiyle)
-Bu GitHub reposunda:
+> Bilgisayar donanım kısıtları nedeniyle model eğitimi farklı bir bilgisayarda
+> gerçekleştirilmiş, elde edilen eğitilmiş model dosyaları bu projede kullanılmıştır.
 
-- Modelin eğitiminde kullanılan kodlar
-- Eğitilmiş model dosyaları(kısıtlı)
-- Eğitim sürecine ait performans çıktıları
-  yer almaktadır.
+Projede, Hugging Face Transformers kütüphanesi kullanılarak eğitilmiş bir
+**Image Classification modeli** yer almaktadır.
+
+Model dosyaları `data/` klasörü içinde bulunmaktadır:
+
+- `model.safetensors`
+- `config.json`
+- `preprocessor_config.json`
+- `training_args.bin`
+- `checkpoint-*`
+  
 Eğitilen modele drive linki üzerinden ulaşabilirsiniz:https://drive.google.com/file/d/1nbmmtKCvDanNl6eww4WaLRfFU5i1L6ab/view?usp=drive_link
-### Kullanılan Model
+
+Bu projede, görüntü sınıflandırma görevleri için yaygın olarak kullanılan
+Vision Transformer (ViT) mimarisi tercih edilmiştir.
 - `google/vit-base-patch16-224`
 
 ### Eğitim Parametreleri
@@ -82,7 +77,7 @@ Eğitilen modele drive linki üzerinden ulaşabilirsiniz:https://drive.google.co
 
 ##  Eğitim Sonuçları
 
-Eğitim sürecinde elde edilen sonuçlara göre:
+Eğitim sürecinde elde edilen çıktılara göre:
 
 - Eğitim kaybı (Training Loss) epoch’lar ilerledikçe azalmıştır  
 - Doğrulama kaybı (Validation Loss) düşük ve stabil seviyede kalmıştır  
@@ -90,7 +85,7 @@ Eğitim sürecinde elde edilen sonuçlara göre:
 
 Eğitim sürecine ait **Loss** ve **Accuracy** grafikleri aşağıdaki dosyada yer almaktadır:
 
-📌 `eğitim_sonuçları.jpeg`
+ `eğitim_sonuçları.jpeg`
 ---
 
 ##  Web Arayüzü (Streamlit)
@@ -99,9 +94,11 @@ Geliştirilen Streamlit tabanlı web arayüzü sayesinde kullanıcılar:
 
 - Bilgisayarlarından bir hayvan görseli yükleyebilir  
 - Tek tıklama ile sınıflandırma tahmini alabilir  
-- Tahmin edilen sınıfı ve güven oranını görüntüleyebilir  
+- Tahmin edilen sınıfı ve doğruluk oranını görüntüleyebilir  
 
-Arayüz, sade ve kullanıcı dostu olacak şekilde tasarlanmıştır.
+Arayüz, sade ve kullanıcı dostu olacak şekilde tasarlanmıştır. Arayüzün ekran görüntüsü aşağıdaki gibidir:
+
+![Hayvan Sınıflandırma Arayüzü](Hayvan_Siniflandırma_Arayüz.png)
 
 ---
 
