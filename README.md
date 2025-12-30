@@ -13,12 +13,14 @@ ve hangi hayvan sınıfına ait olduğu tahmin edilerek kullanıcıya gösterili
 
 Projede aşağıdaki teknolojiler ve kütüphaneler kullanılmıştır:
 
-- **Python**
-- **PyTorch**
-- **Hugging Face Transformers**
-- **Streamlit**
-- **Pillow (PIL)**
-- **Safetensors**
+- **Python** Kullanılan dil
+- **PyTorch** Derin öğrenme
+- **Hugging Face Transformers** Model eğitimi
+- **Streamlit** Arayüz
+- **Pillow (PIL)** RGB dönüşümü
+- **Scikit-learn** Model doğruluğu
+- **Numpy** Tahmin sonuçlarınım işlenmesi
+- **Matplotlib** Eğitim grafikleri
 
 ---
 
@@ -46,7 +48,7 @@ Türkçe karşılıkları ile gösterilmektedir.
 
 ##  Model Hakkında
 
-> Bilgisayar donanım kısıtları nedeniyle model eğitimi farklı bir bilgisayar ortamında gerçekleştirilmiştir.
+> Bilgisayar donanım kısıtları(gpu) nedeniyle model eğitimi farklı bir bilgisayar ortamında gerçekleştirilmiştir.
 
 Projede, Hugging Face Transformers kütüphanesi kullanılarak eğitilmiş bir
 **Image Classification modeli** yer almaktadır.
@@ -98,6 +100,8 @@ Geliştirilen Streamlit tabanlı web arayüzü sayesinde kullanıcılar:
 Arayüz, sade ve kullanıcı dostu olacak şekilde tasarlanmıştır. Arayüzün ekran görüntüsü aşağıdaki gibidir:
 
 ![Hayvan Sınıflandırma Arayüzü](Hayvan_Siniflandırma_Arayüz.png)
+
+Aynı zamanda demo videosuna ulaşmak içni bu drive linkini kullanabilirsiniz: https://drive.google.com/file/d/1xJZ2xJVo6Eira_t3INLoA1GtFtQ4SYgQ/view?usp=sharing
 
 ---
 
